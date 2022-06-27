@@ -18,12 +18,12 @@ Why OOPS?
 /*
 Basic Concept in Object Oriented Programmng ---->
 
-~> Classes --> (basic tmplate for creating objects) A class is an entity that determines how an object will behave and ehat the object will contain.
+~> Classes --> (basic tmplate for creating objects) A class is an entity that determines how an object will behave and what the object will contain.
     For example --> lets say we have a class Car which has data members(variables) such as speed, weight, price and function such as gearChange(), slowDown(), brake(), etc.
 
 ~> Objects --> (basic run time entities) An object can be defined as an instance of a class, and there can be multiple instance of a class in a program.
 
-~> Data Abstraction & Encapsulation --> Wrapping data and function int single unit.
+~> Data Abstraction & Encapsulation --> Wrapping data and function in single unit.
 
 ~> Inheritance --> Properties of one class can be inherited into others.(For example :- Child inherits the traits of his/her parents)
 
