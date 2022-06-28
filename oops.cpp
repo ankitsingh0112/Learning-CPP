@@ -1,3 +1,5 @@
+// Definition :- OOP is an approach that provides a way of modularizing programs by creationg partitioned memeory area for both data and functions that can be used as a template(class) for creating copies of such mofules on demand(objects).
+
 /*
 Why OOPS?
 
