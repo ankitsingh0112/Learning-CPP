@@ -8,6 +8,8 @@ private:
 
 public:
     int d, e;
+
+    //we can define a function either inside the class or outside of the class.
     void setData(int a1, int a2, int a3); //function declaration
     void getData()
     {
@@ -28,9 +30,9 @@ void Employee ::setData(int a1, int a2, int a3)
 
 int main()
 {
-    Employee ankit;
+    Employee ankit; // here ankit is an object (objects are nothing but variables of type class)
     // ankit.a = 76; // This will throw error as a is private, we cannot access the private thing directly
-    ankit.d = 34;
+    ankit.d = 34; //since d & e is defined as public so we can access it directly from main
     ankit.e = 43;
     ankit.setData(23, 37, 45);
     ankit.getData();
