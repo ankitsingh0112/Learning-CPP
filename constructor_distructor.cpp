@@ -35,6 +35,7 @@ public:
         price = p;
     }
 
+    //copy Constructor
     Laptop(Laptop &obj)
     {
         cout<<"Copy constructor is called"<<endl;
