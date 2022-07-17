@@ -104,6 +104,14 @@ A constructor is different from normal function in following ways:
 >> A constructor is automatically called when an object is created.
 >> If we do not specify a constructor, C++ compiler generates a default constructor for us(excepts no parametes and has an empty body).
 
+--> Characteristic of Constructors :-
+
+>> It should be declared in the public section of the class
+>> They are automatically invoked whenever the object is created
+>> They cannot return values and do not have return types
+>> It can have default arguments
+>> We cannot refer to their address
+
 --> Types of constructors?
 
 1.) Default Constructors : Default constructor is the constructor which doesn't take any argument.
