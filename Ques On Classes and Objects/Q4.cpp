@@ -23,7 +23,7 @@ public:
         double area = sqrt(s * (s - a) * (s - b) * (s - c));
         cout << "Area of the Triangle : " << area << endl;
     }
-    int perimeter()
+    void perimeter()
     {
         cout << "Perimeter of the Triangle : " << (a + b + c) << endl;
     }

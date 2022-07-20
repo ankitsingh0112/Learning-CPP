@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+int count = 0;
 class Laptop
 {
 private:
@@ -20,14 +20,17 @@ public:
     {
         // checking is really constructor get created
         cout<<"Default constructor is called"<<endl;
-
+        count++;
         company_name = "HP";
+        cout << "Count is : "<< count << endl;
     }
 
     // parameterized constructor
     Laptop(string c_name, string mname, int b_backup, float r, double p)
     {
         cout<<"Parameterized constructor is called"<<endl;
+        count++;
+        cout << "Count is : "<< count << endl;
         company_name = c_name;
         model_name = mname;
         btry_backup = b_backup;
@@ -36,8 +39,11 @@ public:
     }
 
     //copy Constructor
+    // when no copy constructor is found then complier supplies its own copy constructor
     Laptop(Laptop &obj)
     {
+        count++;
+        cout << "Count is : "<< count << endl;
         cout<<"Copy constructor is called"<<endl;
         company_name = obj.company_name;
         model_name = obj.model_name;
@@ -63,8 +69,8 @@ public:
     // in this we don't need destructor, it isgennerally needed when we dynamically locates the memory
     ~Laptop()
     {
-        cout<<"Destructor called"<<endl;
-        //since its printing 3 times because the constructor is called 3 times 
+        cout<<"Destructor called for " << count-- <<endl;
+        //since its printing 4 times because the constructor is called 4 times 
     }
 };
 
@@ -78,12 +84,14 @@ void Laptop::setData(string mname, int b_backup, float r, double p)
 
 int main()
 {
-    Laptop lappi1; // when create a obj then the default constructor created by compiler automatically
+    Laptop lappi1, lappi4; // when create a obj then the default constructor created by compiler automatically
     Laptop lappi2("hp", "Pavillion 15 Gaming", 6, 4.6, 60000); // when we create parametrized constructor then we have to pass the value as an argument
     lappi1.setData("Pavillion 15", 8, 4.8, 56000);
     lappi1.displayData();
     lappi2.displayData();
-    Laptop lappi3 = lappi1;
+    lappi4 = lappi1;// copy constructor will not be invoked but it'll show the same data as lappi1 have.
+    lappi4.displayData();
+    Laptop lappi3 = lappi1; // copy constructor is invoked
     lappi3.displayData();
     return 0;
 }
