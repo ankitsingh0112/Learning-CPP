@@ -3,6 +3,28 @@ using namespace std;
 
 // Function Overloading : ---->  naam same but kaam different
 
+/*
+Functions Overloading in C++ :-
+
+-> Function overloading is a feature in C++ where two or more functions can have the same name but different parameters.
+-> Function overloading can be considered as an example of polymorphism feature in C++
+
+Rules for Function Overloading :-
+
+~An overloaded function must have :
+-> Different type of parameters
+-> Different number of parameters
+-> Different sequence of parameters
+
+example:
+1. void print();
+2. void print(int a);
+3. void print(float a);
+4. void print(int a, int b);
+5. void print(int a, double b);
+6. void print(double a, int b);
+*/
+
 //sum of two number
 int sum(int a, int b){
     cout <<"Inside the function with 2 arguments" <<endl;
