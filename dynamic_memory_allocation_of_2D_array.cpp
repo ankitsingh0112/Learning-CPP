@@ -26,5 +26,17 @@ int main() {
         }
         cout << endl;
     }
+
+    // Once we create a 2d array or any other datatype - Dynamically then it is mandatory to free the allocated memory
+    // becouse these memory are created in heap memory and heap memory does not clear itsely
+    // we have to clear the memonry manually
+
+    // releasing the memory
+    // first we have to delete the memory that is allocated to columns
+    for(int i = 0; i < row; i++) {
+        delete []arr[i];
+    }
+    // now delete the memory that is allocated to row :
+    delete []arr;
     return 0;
 }
